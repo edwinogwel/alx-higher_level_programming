@@ -8,8 +8,4 @@ def fizzbuzz():
             message = "Fizz"
         elif i % 5 == 0:
             message = "Buzz"
-
-        if message:
-            print(message, end=" ")
-        else:
-            print(i, end=" ")
+        print(message, end=" ") if message else print(i, end=" ")           

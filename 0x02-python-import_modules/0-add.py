@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
+
+if __name__ == "__main__":  # Your code should not be executed when imported
     from add_0 import add
 
     a = 1

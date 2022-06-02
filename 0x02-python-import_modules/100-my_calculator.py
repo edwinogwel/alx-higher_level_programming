@@ -12,14 +12,18 @@ if __name__ == "__main__":
     op = argv[2]        # operator
     b = int(argv[3])    # 2nd arg
 
+    message = ""
     if op == '+':
-        print("{} {} {} = {}".format(a, op, b, add(a, b)))
-    elif op == '-':
-        print("{} {} {} = {}".format(a, op, b, sub(a, b)))
-    elif op == '*':
-        print("{} {} {} = {}".format(a, op, b, mul(a, b)))
-    elif op == '/':
-        print("{} {} {} = {}".format(a, op, b, div(a, b)))
+        message = f"{a} {op} {b} = {add(a, b)}"
+    if op == '-':
+        message = f"{a} {op} {b} = {sub(a, b)}"
+    if op == '*':
+        message = f"{a} {op} {b} = {mul(a, b)}"
+    if op == '/':
+        message = f"{a} {op} {b} = {div(a, b)}"
+
+    if message:
+        print(message)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)

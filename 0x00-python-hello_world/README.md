@@ -1,6 +1,6 @@
 # 0x00. Python - Hello, World
 
-<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/231/Flyingcircus_2.jpg" width="550" height="auto">
+<img src="https://photos1.blogger.com/img/236/4334/1024/DSCN0387.jpg" alt="Tim Peters" width="550" height="auto"/>
 
 ### The Zen of Python, by Tim Peters
 

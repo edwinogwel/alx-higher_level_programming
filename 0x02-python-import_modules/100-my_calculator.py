@@ -22,8 +22,5 @@ if __name__ == "__main__":
     if op == '/':
         message = f"{a} {op} {b} = {div(a, b)}"
 
-    if message:
-        print(message)
-    else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+    print(message) if message else print(
+        "Unknown operator. Available operators: +, -, * and /") and exit(1)

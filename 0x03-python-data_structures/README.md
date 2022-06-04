@@ -20,3 +20,18 @@ Write a function that replaces an element in a list at a specific position witho
 #### [5. Can you C me now? 🙃](5-no_c.py)
 Write a function that removes all characters c and C from a string.
 - **Prototype**: ```def no_c(my_string):```
+#### [6. Lists of lists = Matrix](6-print_matrix_integer.py)
+Write a function that prints a matrix of integers.
+- **Prototype**: ```def print_matrix_integer(matrix=[[]]):```
+#### [7. Tuples addition](7-add_tuple.py)
+Write a function that adds 2 tuples.
+- **Prototype**: ```def add_tuple(tuple_a=(), tuple_b=()):```
+#### [8. More returns!](8-multiple_returns.py)
+Write a function that returns a tuple with the length of a string and its first character.
+- **Prototype**: ```def multiple_returns(sentence):```
+#### [9. Find the max](9-max_integer.py)
+Write a function that finds the biggest integer of a list.
+- **Prototype**: ```def max_integer(my_list=[]):```
+#### [10. Only by 2](10-divisible_by_2.py)
+Write a function that finds all multiples of 2 in a list
+- **Prototype**: ```def divisible_by_2(my_list=[]):```

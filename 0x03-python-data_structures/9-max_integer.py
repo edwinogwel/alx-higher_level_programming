@@ -4,6 +4,5 @@ def max_integer(my_list=[]):
         return          # default value = None
     else:
         my_list.sort()
-        biggest = my_list.pop()
-
-        return biggest
+        largest = my_list.pop()
+        return largest

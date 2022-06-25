@@ -25,7 +25,7 @@ Prototype: `def print_square(size):`
 Prototype: `def text_indentation(text):`
 
 #### [5. Max integer - Unittest](tests/6-max_integer_test.py)
-* Write unittests for the function `def max_integer(list=[]):` in 6-max_integer.py
+* Write unittests for the function `def max_integer(list=[]):` in [6-max_integer.py](6-max_integer.py)
 
 #### [6. Matrix multiplication](100-matrix_mul.py)
 * Write a function that multiplies 2 matrices: <br>

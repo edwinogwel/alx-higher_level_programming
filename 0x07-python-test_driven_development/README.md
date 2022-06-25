@@ -38,3 +38,5 @@ Prototype: `def lazy_matrix_mul(m_a, m_b):`
 #### [8. CPython #3: Python Strings](102-python.c)
 * Create a function that prints Python strings. <br>
 Prototype: `void print_python_string(PyObject *p);`
+
+<img src="https://mediathequeducarresaintlazare.files.wordpress.com/2020/01/sylvie-monty.gif">

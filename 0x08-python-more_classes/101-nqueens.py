@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-""" The N Queens Puzzle. """
+"""N Queens Puzzle"""
 
 
 def isSafe(board, row, col):
-    '''
-    Check if position is safe from attack.
+    '''Checks if position is safe from attack.
     Args:
         board: The board state.
         row: The row to check.
@@ -17,8 +16,7 @@ def isSafe(board, row, col):
 
 
 def checkBoard(board, col):
-    '''
-    Check the board state column by column using backtracking.
+    '''Checks the board state column by column using backtracking.
     Args:
         board: The board state.
         col: The current colum to check.

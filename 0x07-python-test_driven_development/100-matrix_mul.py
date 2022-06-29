@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" This module provides a function for matrix multiplication. """
+""" Multiply two matrices and return the result. """
 
 
 def matrix_mul(m_a, m_b):
-    """ Return the product of m_a and m_b """
+    """ Return the product of m_a and m_b."""
+
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     if type(m_b) is not list:
@@ -57,5 +58,4 @@ def matrix_mul(m_a, m_b):
         for j in range(len(m_b[0])):
             for k in range(len(m_b)):
                 result[i][j] += m_a[i][k] * m_b[k][j]
-
     return result

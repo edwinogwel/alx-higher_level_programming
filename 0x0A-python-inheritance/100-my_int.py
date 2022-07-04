@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" This module defines a class MyInt """
+
+
 class MyInt(int):
     """
     MyInt inherits from int, but reverses

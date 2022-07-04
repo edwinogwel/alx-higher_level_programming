@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module defines a class Square """
 
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__("9-rectangle").Rectangle
 
 
@@ -9,14 +10,14 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """ Instantiation with width """
-        try:
-            super().__init__(size, size)
-        except TypeError:
-            raise TypeError("size must be an integer")
-        except ValueError:
-            raise TypeError("size must be greater than 0")
+        self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
     def __str__(self):
         """ Return description of the square """
         return f"[Square] {self.__size}/{self.__size}"
+
+    def area(self):
+        """ Return area of the square """
+        return self.__size ** 2

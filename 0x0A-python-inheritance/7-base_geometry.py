@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module defines a class 'BaseGeometry' """
+""" This module defines a class BaseGeometry """
 
 
 class BaseGeometry:
@@ -13,5 +13,5 @@ class BaseGeometry:
         """ Validate value """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
-        if value <= 0:
+        if value < 1:
             raise ValueError(f"{name} must be greater that 0")

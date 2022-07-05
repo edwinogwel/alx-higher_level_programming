@@ -6,4 +6,4 @@ def read_file(filename=""):
     """ Read file content and print it """
     with open(filename) as file:
         read_data = file.read()
-    print(read_data)
+        print(read_data, end="")

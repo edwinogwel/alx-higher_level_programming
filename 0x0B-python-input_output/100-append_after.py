@@ -4,7 +4,7 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """ Insert text to file after lines with a specific string """
-    with open(filename) as file:
+    with open(filename, 'r+') as file:
         lines = [
             line + new_string * (search_string in line)
             for line in file.readlines()

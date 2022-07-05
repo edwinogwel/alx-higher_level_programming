@@ -13,6 +13,8 @@ class Student:
 
     def to_json(self, attrs=None):
         """ Return a dict representation of a Student instance """
-        if isinstance(attrs, list) and all(map(lambda s: isinstance(s, str), attrs)):
+        if isinstance(attrs, list) and all(
+            map(lambda s: isinstance(s, str), attrs)
+        ):
             return {k: self.__dict__[k] for k in attrs if k in self.__dict__}
         return self.__dict__

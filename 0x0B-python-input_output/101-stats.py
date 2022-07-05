@@ -12,6 +12,7 @@ STATUS_CODES = ['200', '301', '400', '401', '403', '404', '405', '500']
 
 
 def print_stats(file_size, status_codes):
+    """ Print stats """
     print("File size: {}".format(total_size), *(
         "{}: {}".format(k, status_codes[k]) for k in sorted(status_codes)
     ), sep="\n")

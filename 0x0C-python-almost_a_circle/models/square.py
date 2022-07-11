@@ -35,3 +35,7 @@ class Square(Rectangle):
             for key in kwargs:
                 if key in self.HEADERS:
                     setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        """ Return a dict representation of a square """
+        return {key: getattr(self, key) for key in Square.HEADERS}

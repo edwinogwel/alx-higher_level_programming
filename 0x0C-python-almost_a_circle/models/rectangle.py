@@ -96,5 +96,5 @@ class Rectangle(Base):
                     setattr(self, key, kwargs[key])
 
     def to_dictionary(self):
-        """ Return a dict rep. of a rectangle """
+        """ Return a dict representation of a rectangle """
         return {key: getattr(self, key) for key in Rectangle.HEADERS}

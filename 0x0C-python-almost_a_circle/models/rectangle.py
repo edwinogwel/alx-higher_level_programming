@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """ Definition of Rectangle class """
+    HEADERS = ('id', 'width', 'height', 'x', 'y')
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Instantiate a rectangle object """
@@ -83,3 +84,9 @@ class Rectangle(Base):
         """ Print the rectangle with the character '#' """
         print("\n" * self.y, end="")
         print("\n".join([" " * self.x + "#" * self.width] * self.height))
+
+    def update(self, *args):
+        """ Assign an argument to each attribute """
+        if args:
+            for pair in zip(self.HEADERS, args):
+                setattr(self, *pair)

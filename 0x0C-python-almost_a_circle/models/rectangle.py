@@ -86,7 +86,7 @@ class Rectangle(Base):
         print("\n".join([" " * self.x + "#" * self.width] * self.height))
 
     def update(self, *args, **kwargs):
-        """ Assign an argument to each attribute """
+        """ Assign an arg to each attr """
         if args:
             for pair in zip(self.HEADERS, args):
                 setattr(self, *pair)
@@ -94,3 +94,7 @@ class Rectangle(Base):
             for key in kwargs:
                 if key in self.HEADERS:
                     setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        """ Return a dict rep. of a rectangle """
+        return {key: getattr(self, key) for key in Rectangle.HEADERS}

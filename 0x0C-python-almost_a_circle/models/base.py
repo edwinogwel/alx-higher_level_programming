@@ -5,6 +5,8 @@ import json
 
 class Base:
     """ Definition of Base class """
+    HEADERS = ("id")
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -58,5 +60,27 @@ class Base:
             with open(f"{cls.__name__}.json", "r") as file:
                 return [cls.create(**obj)
                         for obj in cls.from_json_string(file.read())]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Save to a CSV file """
+        with open(f"{cls.__name__}.csv", "w") as file:
+            if list_objs:
+                for obj in list_objs:
+                    obj = obj.to_dictionary()
+                    file.write(
+                        ",".join(str(obj[key]) for key in cls.HEADERS) + "\n"
+                    )
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Load from a CSV file """
+        try:
+            with open(f"{cls.__name__}.csv", "r") as file:
+                return [cls.create(
+                    **{k: int(v) for k, v in zip(cls.HEADERS, line.split(","))}
+                ) for line in file.readlines()]
         except FileNotFoundError:
             return []

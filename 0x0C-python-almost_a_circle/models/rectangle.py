@@ -18,7 +18,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """ Return a str rep. of the rectangle """
-        s = f"[Rectangle]({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        s = "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
         return s
 
     @property

@@ -2,7 +2,6 @@
 """ List all State objects, and corresponding City
     objects, contained in the database hbtn_0e_101_usa  """
 
-
 if __name__ == "__main__":
 
     import sys

@@ -6,12 +6,14 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-engine = create_engine(f"mysql+mysqldb://{sys.argv[1]}:\
-                        {sys.argv[2]}@localhost/{sys.argv[3]}",
-                       pool_pre_ping=True)
-Base.metadata.create_all(engine)
-session = Session(engine)
 
-for state in session.query(State).order_by(State.id).all():
-    print(f"{state.id}: {state.name}")
-session.close()
+if __name__ == "__main__":
+    engine = create_engine(f"mysql+mysqldb://{sys.argv[1]}:\
+                            {sys.argv[2]}@localhost/{sys.argv[3]}",
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+
+    session = Session(engine)
+    for state in session.query(State).order_by(State.id).all():
+        print(f"{state.id}: {state.name}")
+    session.close()
